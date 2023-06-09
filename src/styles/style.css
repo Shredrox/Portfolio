@@ -8,6 +8,21 @@ body {
   background-color: #141414;
 }
 
+.header {
+  background-color: transparent;
+  color: white;
+  height: 70px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 1rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2rem;
+  list-style: none;
+}
+
 .welcome-section {
   color: white;
   display: flex;
@@ -15,4 +30,60 @@ body {
   align-items: center;
   font-family: "Raleway", sans-serif;
   font-size: 3rem;
+  height: 700px;
+  flex-direction: column;
+  gap: 3rem;
+  background: rgb(27, 27, 27);
+  background: radial-gradient(circle, rgb(27, 27, 27) 0%, rgb(20, 20, 20) 100%);
+}
+.welcome-section h3 {
+  animation: drop-in 1200ms;
+}
+
+@keyframes drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+.orbit {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+.orbiting-ellipse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  transform-origin: center center;
+  animation: rotate 10s linear infinite;
+  transition: 0.5s ease-in-out;
+}
+.orbiting-ellipse:hover {
+  transform: translate(-50%, -50%);
+  scale: 1.05;
+  background-color: yellow;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 $blackColor:#141414;
+$lighterBlack: #1B1B1B;
 $mainFont: 'Nunito Sans', sans-serif;
 $headingFont: 'Raleway', sans-serif;
 
@@ -6,6 +7,14 @@ $headingFont: 'Raleway', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin flex($horizontal, $vertical, $direction, $gap){
+    display: flex;
+    justify-content: $horizontal;
+    align-items: $vertical;
+    flex-direction: $direction;
+    gap: $gap;
 }
 
 *{
@@ -18,9 +27,79 @@ body{
     background-color: $blackColor;
 }
 
+.header{
+    background-color: transparent;
+    color: white;
+    height: 70px;
+    @include flex(left, center, row, 2rem);
+    padding: 1rem;
+    font-family: $mainFont;
+    font-size: 2rem;
+    list-style: none;
+}
+
 .welcome-section{
     color: white;
     @include flexCenter();
     font-family: $headingFont;
     font-size: 3rem;
+    height: 700px;
+    flex-direction: column;
+    gap: 3rem;
+    background: rgb(27,27,27);
+    background: radial-gradient(circle, rgba(27,27,27,1) 0%, rgba(20,20,20,1) 100%);
+    
+    h3{
+        animation: drop-in 1200ms ;
+    }
+}
+
+@keyframes drop-in {
+    from {
+     opacity: 0;
+     transform: translateY(-100px);
+    }
+    to {
+     opacity: 1;
+     transform: translate(0px);
+    }
+}
+
+.orbit {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+  
+.orbiting-ellipse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    transform-origin: center center;
+    animation: rotate 10s linear infinite;
+    transition: 0.5s ease-in-out;
+
+    &:hover{
+        transform: translate(-50%, -50%);
+        scale: 1.05;
+        background-color: yellow;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+    }
+}
+  
+@keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
+    }
 }
