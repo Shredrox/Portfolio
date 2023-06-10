@@ -31,11 +31,27 @@ body{
     background-color: transparent;
     color: white;
     height: 70px;
-    @include flex(left, center, row, 2rem);
+    @include flex(right, center, row, 2rem);
     padding: 1rem;
     font-family: $mainFont;
     font-size: 2rem;
     list-style: none;
+
+    button{
+        padding: 0.75rem;
+        border-radius: 1rem;
+        color: white;
+        background-color: $lighterBlack;
+        cursor: pointer;
+        transition: 0.2s linear;
+        border-style: none;
+        font-size: 1.5rem;
+
+        &:hover{
+            background-color: #393838;
+            transition: 0.2s linear;
+        }
+    }
 }
 
 .welcome-section{
@@ -52,6 +68,18 @@ body{
     h3{
         animation: drop-in 1200ms ;
     }
+}
+
+.about-me{
+    color: white;
+    height: 800px;
+    padding: 10rem;
+}
+
+.about-me-text{
+    width: 500px;
+    font-family: $mainFont;
+    font-size: 2rem;
 }
 
 @keyframes drop-in {
@@ -103,3 +131,29 @@ body{
       transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
     }
 }
+
+.star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 1rem;
+    background-color: #fff;
+    animation: twinkle 1s infinite;
+}
+  
+@keyframes twinkle {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+  
