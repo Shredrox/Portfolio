@@ -7,10 +7,10 @@ import reactImg from '../assets/react.png'
 import csharpImg from '../assets/csharp.png'
 import dotnetImg from '../assets/dotnet.jpg'
 
-export const AboutMeSection = ({refe}) => {
+export const AboutMeSection = ({elRef}) => {
   
   return (
-    <div ref={refe} className='about-me'>
+    <div ref={elRef} className='about-me'>
       <div className='straight-line-short'></div>
       <div className='curved-line-down'></div>
       <div className='curved-line-up'></div>

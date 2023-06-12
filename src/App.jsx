@@ -5,7 +5,8 @@ import { AboutMeSection } from './components/AboutMeSection'
 import { ProjectsSection } from './components/ProjectsSection';
 
 function App() {
-  const ref = useRef(null);
+  const aboutMeRef = useRef(null);
+  const projectsRef = useRef(null);
 
   const handleClick = (elementRef) =>{
     window.scrollTo({top: elementRef.current.offsetTop, behavior: 'smooth'});
@@ -13,10 +14,10 @@ function App() {
 
   return (
     <>
-      <Header scroll={handleClick} aboutMeRef={ref}/>
+      <Header scroll={handleClick} aboutMeRef={aboutMeRef} projectsRef={projectsRef}/>
       <WelcomeSection/>
-      <AboutMeSection refe={ref}/>
-      <ProjectsSection/>
+      <AboutMeSection elRef={aboutMeRef}/>
+      <ProjectsSection elRef={projectsRef}/>
     </>
   )
 }
