@@ -2,6 +2,7 @@ import { useState, useRef } from 'react'
 import { WelcomeSection } from './components/WelcomeSection'
 import { Header } from './components/Header'
 import { AboutMeSection } from './components/AboutMeSection'
+import { ProjectsSection } from './components/ProjectsSection';
 
 function App() {
   const ref = useRef(null);
@@ -15,6 +16,7 @@ function App() {
       <Header scroll={handleClick} aboutMeRef={ref}/>
       <WelcomeSection/>
       <AboutMeSection refe={ref}/>
+      <ProjectsSection/>
     </>
   )
 }
