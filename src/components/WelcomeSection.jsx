@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const WelcomeSection = () => {
+export const WelcomeSection = ({elRef}) => {
   return (
-    <div className='welcome-section'>
+    <div ref={elRef} className='welcome-section'>
         <h3>Hello there,<br></br> I'm Mihail Shterev</h3>
         <div className="welcome-section-curved-line"/>
         <div className="welcome-section-curved-line-left-up"/>
