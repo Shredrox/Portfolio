@@ -25,17 +25,124 @@ $headingFont: 'Raleway', sans-serif;
 
 body{
     background-color: $blackColor;
+    height: 2500px;
+}
+
+.straight-line-short{
+    position: absolute;  
+    top: 0;
+    left: 8%; 
+    height: 90px;  
+    width: 2px;  
+    background-color: white;  
+    z-index: 9999; 
+    box-shadow: 0 0 20px 4px #291386;
+}
+
+.straight-line-long{
+    position: absolute;  
+    top: 280px;
+    left: 8%; 
+    height: 520px;  
+    width: 2px;  
+    background-color: white;  
+    z-index: 9999; 
+    box-shadow: 0 0 20px 4px #291386;
+}
+
+.welcome-section-horizonal-line{
+    position: absolute;  
+    bottom: 98px;
+    left: 251px;
+    width: 1009px;  
+    height:  2px;  
+    background: rgb(255,255,255);
+    box-shadow: 0 0 20px 4px #291386;
+    z-index: 9999; 
+}
+
+.welcome-section-curved-line{
+    border-radius: 100% 0 0 0;
+    color: white;
+    bottom: 0;
+    border-color: white;
+    border-style: solid;
+    border-bottom: 0;
+    border-right: 0;
+    border-width: 2px;
+    left: 8%;  
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+.welcome-section-curved-line-left-up{
+    border-radius: 0 0 100% 0;
+    color: white;
+    bottom: 98px;
+    border-color: white;
+    border-style: solid;
+    border-top: 0;
+    border-left: 0;
+    border-width: 2px;
+    right: 546px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+.curved-line-down{
+    border-radius: 0 0 0 100%;
+    color: white;
+    top: 87px;
+    border-color: white;
+    border-style: solid;
+    border-top: 0;
+    border-right: 0;
+    left: 8%; 
+    height: 100px;
+    width: 100px;
+    border-width: 2px;
+    position: absolute;
+}
+
+.curved-line-up{
+    border-radius: 100% 0 0 0;
+    color: white;
+    top: 185px;
+    border-color: white;
+    border-style: solid;
+    border-bottom: 0;
+    border-right: 0;
+    border-width: 2px;
+    left: 8%; 
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+.point{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+
+    background: #D9D9D9;
+    box-shadow: 0px 0px 37.8px #D9D9D9, 0px 0px 21.6px #D9D9D9, 0px 0px 12.6px #D9D9D9, 0px 0px 6.3px #D9D9D9, 0px 0px 1.8px #D9D9D9, 0px 0px 0.9px #D9D9D9;
 }
 
 .header{
     background-color: transparent;
     color: white;
+    width: 100%;
     height: 70px;
     @include flex(right, center, row, 2rem);
     padding: 1rem;
     font-family: $mainFont;
     font-size: 2rem;
     list-style: none;
+    position: fixed;
+    z-index: 500;
 
     button{
         padding: 0.75rem;
@@ -60,26 +167,76 @@ body{
     font-family: $headingFont;
     font-size: 3rem;
     height: 700px;
-    flex-direction: column;
-    gap: 3rem;
+    position: relative;
+    flex-direction: row;
+    gap: 20rem;
     background: rgb(27,27,27);
-    background: radial-gradient(circle, rgba(27,27,27,1) 0%, rgba(20,20,20,1) 100%);
-    
+    background: radial-gradient(circle, rgb(16, 11, 37) 0%, #010c14 100%);
+
     h3{
         animation: drop-in 1200ms ;
     }
 }
 
 .about-me{
+    position: relative;
     color: white;
     height: 800px;
     padding: 10rem;
+    @include flex(center,center, row, 20rem);
+    background: url('../assets/about-me-bg.svg');
+    
+    img{
+        width: 300px;
+    }
+
 }
 
 .about-me-text{
     width: 500px;
     font-family: $mainFont;
     font-size: 2rem;
+
+    img{
+        width: 90px;
+    }
+
+    h2{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.about-me-stack{
+    width: 500px;
+    font-family: $mainFont;
+    font-size: 2rem;
+    @include flex(center, center, column, 1rem);
+
+    img{
+        width: 90px;
+    }
+}
+
+.tech-stack{
+    @include flex(center, center, row, 1rem);
+}
+
+.projects-section{
+    position: relative;
+    color: white;
+
+    h2{
+        top: 152px;
+        left: 14%;
+        display: flex;
+        position: absolute;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
 }
 
 @keyframes drop-in {
@@ -93,13 +250,60 @@ body{
     }
 }
 
-.orbit {
+.galaxy-container{
     position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
+    width: 800px;
+    height: 500px;
+    @include flexCenter();
+    background: url('../assets/stars.svg');
+}
+
+.orbit {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    rotate: -17deg;
+    border: 1px solid #ffd65c;
     border-radius: 50%;
+    box-shadow: 0 0 50px 15px #fadd86;
+    background-color: #ffffff;
+    z-index: 2;
+}
+
+.orbit-2 {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    rotate: -17deg;
+    border: 1px solid #ad31ff;
+    border-radius: 50%;
+    box-shadow: 0 0 50px 15px #ad31ff;
+    animation: pulse 2s infinite;
+    z-index: 2;
+}
+
+.orbit-3{
+    position: absolute;
+    width: 270px;
+    height: 150px;
+    rotate: -17deg;
+    border: 1px solid #4e31cc;
+    border-radius: 50%;
+    box-shadow: 0 0 50px 15px #3c1ec2;
+    animation: pulse 2.5s infinite;
+    z-index: 2;
+}
+
+.orbit-4{
+    position: absolute;
+    width: 330px;
+    height: 190px;
+    rotate: -17deg;
+    border: 1px solid #331ba1;
+    border-radius: 50%;
+    box-shadow: 0 0 100px 35px #291386;
+    animation: pulse 3s infinite;
+    z-index: 2;
 }
   
 .orbiting-ellipse {
@@ -122,6 +326,15 @@ body{
         transition: 0.5s ease-in-out;
     }
 }
+
+.orbiting-ellipse2 {
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+}
   
 @keyframes rotate {
     0% {
@@ -137,10 +350,10 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 6px;
-    height: 6px;
+    width: 10px;
+    height: 10px;
     border-radius: 1rem;
-    background-color: #fff;
+    background-color: #d7ffd5;
     animation: twinkle 1s infinite;
 }
   
@@ -152,6 +365,21 @@ body{
       opacity: 0.5;
     }
     100% {
+      opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
       opacity: 1;
     }
 }
