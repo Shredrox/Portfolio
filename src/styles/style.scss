@@ -50,6 +50,17 @@ body{
     box-shadow: 0 0 20px 4px #291386;
 }
 
+.projects-straight-line-long{
+    position: absolute;  
+    top: 280px;
+    left: 8%; 
+    height: 720px;  
+    width: 2px;  
+    background-color: white;  
+    z-index: 699; 
+    box-shadow: 0 0 20px 4px #291386;
+}
+
 .welcome-section-horizonal-line{
     position: absolute;  
     bottom: 98px;
@@ -59,6 +70,17 @@ body{
     background: rgb(255,255,255);
     box-shadow: 0 0 20px 4px #291386;
     z-index: 999; 
+}
+
+.contact-section-horizonal-line{
+    position: absolute;  
+    top: 185px;
+    left: 13%;
+    width: 500px;  
+    height:  2px;  
+    background: rgb(255,255,255);
+    box-shadow: 0 0 20px 4px #291386;
+    z-index: 0; 
 }
 
 .welcome-section-curved-line{
@@ -145,7 +167,7 @@ body{
     font-size: 2rem;
     list-style: none;
     position: fixed;
-    z-index: 900;
+    z-index: 1200;
 
     button{
         padding: 0.75rem;
@@ -261,13 +283,42 @@ body{
     background-color: #130d2c;
     top: 3rem;
     width: 500px;
-    height: 500px;
+    height: 555px;
+    padding: 1.1rem;
     border-radius: 1.5rem;
     font-family: $mainFont;
     font-size: 1.5rem;
     @include flex(center, center, column, 1rem);
     background: rgb(26,29,40);
     background: linear-gradient(31deg, rgb(7, 13, 41) 0%, rgba(14,16,77,1) 100%); 
+
+    img{
+        width: 400px;
+    }
+
+    button{
+        width: 160px;
+        height: 50px;
+        padding: 0.75rem;
+        border-radius: 1rem;
+        color: white;
+        background-color: $lighterBlack;
+        cursor: pointer;
+        transition: 0.2s linear;
+        border-style: none;
+        font-size: 1.5rem;
+        z-index: 900;
+
+        &:hover{
+            background: #03e9f4;
+            color: #050801;
+            box-shadow: 0 0 2px #03e9f4,
+                        0 0 5px #03e9f4,
+                        0 0 10px #03e9f4,
+                        0 0 50px #03e9f4;
+             -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+        }
+    }
 }
 
 @keyframes drop-in {
@@ -403,6 +454,21 @@ body{
     z-index: 5;
     animation: rotate 25s linear infinite;
 }
+
+.solar-orbit4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 480px;
+    height: 480px;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    border: 1px solid #7060ff;
+    border-radius: 50%;
+    box-shadow: 0 0 70px 1px #42167a;
+    z-index: 3;
+    animation: rotate 30s linear infinite;
+}
   
 .orbiting-ellipse {
     position: absolute;
@@ -498,6 +564,34 @@ body{
     color: white;
     background: url('../assets/contacts-bg.svg');
     @include flex(flex-start, center, column, 1rem);
+
+    h3{
+        position: absolute;
+        width: 400px;
+        bottom: 205px;
+        font-family: $mainFont;
+        font-size: 1.5rem;
+        @include flexCenter();
+        gap: 1rem;
+    }
+
+    a{
+        width: 50px;
+        height: 50px;
+    }
+
+    img{
+        width: 50px;
+        box-shadow: 0 0 5px 2px #4124be;
+        border-radius: 100%;
+        cursor: pointer;
+        transition: 0.2s linear;
+
+        &:hover{
+            box-shadow: 0 0 10px 2px #a494ec;     
+            transition: 0.2s linear;
+        }
+    }
 }
 
 .contact-form{
@@ -512,6 +606,8 @@ body{
     flex-direction: column;
     padding: 1rem;
     gap: 2rem;
+    min-width: 410px;
+    z-index: 1000;
 
     button{
         padding: 0.75rem;
@@ -571,5 +667,4 @@ body{
     height: 50px;
     background-color: #0a0814;
 }
-
   
