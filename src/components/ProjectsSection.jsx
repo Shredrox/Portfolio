@@ -33,43 +33,43 @@ export const ProjectsSection = ({elRef}) => {
          <div className="point"/>
          <div className='straight-line-long'></div>
         </div>
-        <div className='system-container'>
-          <h2>Projects</h2>
-          <div className='solar-system'>
-            <div className='ellipse'></div>
-            <div className="solar-orbit1">
-              <div 
-              onClick={() => selectProject('1', solarSystemSim, '2D Planetary System Simulation', 'https://github.com/Shredrox/2D-Planetary-System-Simulation')} 
-              className={projectSelected == '1' ? 'selected-planet' : 'orbiting-ellipse'}></div>
-            </div>
-            <div className="solar-orbit2">
-              <div 
-              onClick={() => selectProject('2', logicalExpressionInt, 'Logical Expression Interpreter', 'https://github.com/Shredrox/LogicalExpressionInterpreter')} 
-              className={projectSelected == '2' ? 'selected-planet' : 'orbiting-ellipse'}></div>
-            </div>
-            <div className="solar-orbit3">
-              <div 
-              onClick={() => selectProject('3', musicUniverse, 'Music Universe' , 'https://github.com/Shredrox/Music-Universe')} 
-              className={projectSelected == '3' ? 'selected-planet' : 'orbiting-ellipse'}></div>
-            </div>
-            <div className="solar-orbit4">
-              <div 
-              onClick={() => selectProject('4', musicPlayer, 'Music Player' , 'https://github.com/Shredrox/Music-Player')} 
-              className={projectSelected == '4' ? 'selected-planet' : 'orbiting-ellipse'}></div>
+        <div className="projects-display-container">
+          <div className='system-container'>
+            <h2>Projects</h2>
+            <div className='solar-system'>
+              <div className='ellipse'></div>
+              <div className="solar-orbit1">
+                <div 
+                onClick={() => selectProject('1', solarSystemSim, '2D Planetary System Simulation', 'https://github.com/Shredrox/2D-Planetary-System-Simulation')} 
+                className={projectSelected == '1' ? 'selected-planet' : 'orbiting-ellipse'}></div>
+              </div>
+              <div className="solar-orbit2">
+                <div 
+                onClick={() => selectProject('2', logicalExpressionInt, 'Logical Expression Interpreter', 'https://github.com/Shredrox/LogicalExpressionInterpreter')} 
+                className={projectSelected == '2' ? 'selected-planet' : 'orbiting-ellipse'}></div>
+              </div>
+              <div className="solar-orbit3">
+                <div 
+                onClick={() => selectProject('3', musicUniverse, 'Music Universe' , 'https://github.com/Shredrox/Music-Universe')} 
+                className={projectSelected == '3' ? 'selected-planet' : 'orbiting-ellipse'}></div>
+              </div>
+              <div className="solar-orbit4">
+                <div 
+                onClick={() => selectProject('4', musicPlayer, 'Music Player' , 'https://github.com/Shredrox/Music-Player')} 
+                className={projectSelected == '4' ? 'selected-planet' : 'orbiting-ellipse'}></div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="project-container">
-          <h3>{projectTitle}</h3>
-          <img src={image} alt="" />
-          {projectLink !== '' &&
-          <a href={projectLink} target='_blank'><button>Github Repo</button></a>
-          }
+          <div className="project-container">
+            <h3>{projectTitle}</h3>
+            <img src={image} alt="" />
+            {projectLink !== '' &&
+            <a href={projectLink} target='_blank'><button>Github Repo</button></a>
+            }
+          </div>
         </div>
-        </div>
-
-      
+      </div>
     </div>
   )
 }

@@ -9,6 +9,11 @@ body {
   height: 2500px;
 }
 
+h1 {
+  font-size: 3rem;
+  animation: drop-in 1200ms;
+}
+
 .straight-line-short {
   height: 90px;
   width: 2px;
@@ -45,36 +50,6 @@ body {
   background: rgb(255, 255, 255);
   box-shadow: 0 0 20px 4px #291386;
   z-index: 0;
-}
-
-.curved-line-down {
-  border-radius: 0 0 0 100%;
-  color: white;
-  top: 0px;
-  border-color: white;
-  border-style: solid;
-  border-top: 0;
-  border-right: 0;
-  left: 451px;
-  height: 100px;
-  width: 100px;
-  border-width: 2px;
-  position: absolute;
-}
-
-.curved-line-up {
-  border-radius: 100% 0 0 0;
-  color: white;
-  top: 185px;
-  border-color: white;
-  border-style: solid;
-  border-bottom: 0;
-  border-right: 0;
-  border-width: 2px;
-  left: 100px;
-  height: 100px;
-  width: 100px;
-  position: absolute;
 }
 
 .header {
@@ -121,16 +96,13 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Raleway", sans-serif;
-  font-size: 3rem;
   height: 700px;
+  padding-inline: 1rem;
   position: relative;
   flex-direction: column;
   justify-content: center;
   background: rgb(27, 27, 27);
   background: radial-gradient(circle, rgb(16, 11, 37) 0%, #010c14 100%);
-}
-.welcome-section h3 {
-  animation: drop-in 1200ms;
 }
 
 .welcome-section-container {
@@ -142,13 +114,9 @@ body {
   font-size: 3rem;
   height: 550px;
   max-width: 1350px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   flex-direction: row;
   gap: 0rem;
-}
-.welcome-section-container h3 {
-  animation: drop-in 1200ms;
 }
 
 .welcome-section-lines-container {
@@ -156,7 +124,7 @@ body {
   flex-direction: row;
   align-items: center;
   height: 150px;
-  width: 1051px;
+  width: 1300px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -173,7 +141,7 @@ body {
   border-width: 2px;
   height: 100px;
   width: 100px;
-  margin-left: 25px;
+  margin-left: 4.4%;
   margin-top: 49px;
 }
 
@@ -188,6 +156,7 @@ body {
   height: 50px;
   width: 100px;
   margin-bottom: 96px;
+  margin-right: 5px;
   position: relative;
 }
 
@@ -204,7 +173,10 @@ body {
   position: relative;
   color: white;
   height: 800px;
-  background: url("../assets/about-me-bg.svg");
+  background: url("../assets/layered-waves1.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-inline: 1rem;
 }
 .about-me img {
   width: 300px;
@@ -215,8 +187,7 @@ body {
   color: white;
   height: 800px;
   max-width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,9 +198,19 @@ body {
   width: 300px;
 }
 
+.about-me-info-container {
+  width: 91%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 60px;
+  flex-direction: row;
+}
+
 .about-me-text {
   position: relative;
-  width: 500px;
+  max-width: 500px;
   font-family: "Nunito Sans", sans-serif;
   font-size: 2rem;
   bottom: 4.6rem;
@@ -238,7 +219,8 @@ body {
   width: 90px;
 }
 .about-me-text p {
-  height: 430px;
+  font-size: 2rem;
+  min-height: 430px;
 }
 
 .about-me-stack {
@@ -268,7 +250,7 @@ body {
 
 .lines-container {
   position: relative;
-  width: 50px;
+  width: 8.6%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -289,10 +271,15 @@ body {
   height: 15px;
   border-radius: 100%;
   top: 0;
+  right: 0;
   position: absolute;
-  right: 265px;
   background: #ffffff;
   box-shadow: 0px 0px 37.8px #D9D9D9, 0px 0px 21.6px #D9D9D9, 0px 0px 12.6px #D9D9D9, 0px 0px 6.3px #D9D9D9, 0px 0px 1.8px #D9D9D9;
+}
+
+.curve-container {
+  position: relative;
+  width: 106px;
 }
 
 .projects-section {
@@ -301,9 +288,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background: radial-gradient(50% 50% at 50% 50%, #070f25 0%, rgba(3, 3, 4, 0) 99.99%, rgba(0, 0, 0, 0) 100%), url("../assets/projects-bg.svg");
+  background: radial-gradient(50% 50% at 50% 50%, #070f25 0%, rgba(3, 3, 4, 0) 99.99%, rgba(0, 0, 0, 0) 100%), url("../assets/layered-waves3.svg");
   width: 100%;
   height: 800px;
+  padding-inline: 1rem;
 }
 
 .projects-container {
@@ -314,21 +302,23 @@ body {
   gap: 0rem;
   max-width: 1300px;
   height: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
-.system-container {
-  position: relative;
-  width: 500px;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 2rem;
-  bottom: 4.6rem;
+.projects-display-container {
+  width: 91%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 100px;
+  flex-direction: row;
 }
 
 .project-container {
+  position: relative;
   background-color: #130d2c;
-  width: 500px;
+  max-width: 500px;
   height: 555px;
   padding: 1.1rem;
   border-radius: 1.5rem;
@@ -341,9 +331,10 @@ body {
   gap: 1rem;
   background: rgb(26, 29, 40);
   background: linear-gradient(31deg, rgb(7, 13, 41) 0%, rgb(14, 16, 77) 100%);
+  bottom: 2.4rem;
 }
 .project-container img {
-  width: 400px;
+  width: 90%;
 }
 .project-container button {
   width: 160px;
@@ -363,6 +354,14 @@ body {
   color: #050801;
   box-shadow: 0 0 2px #03e9f4, 0 0 5px #03e9f4, 0 0 10px #03e9f4, 0 0 50px #03e9f4;
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
+}
+
+.system-container {
+  position: relative;
+  width: 500px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2rem;
+  bottom: 2.4rem;
 }
 
 @keyframes drop-in {
@@ -602,11 +601,14 @@ body {
 }
 .contact-section {
   position: relative;
-  padding-top: 1.5rem;
   height: 900px;
   width: 100%;
+  padding-inline: 1rem;
   color: white;
-  background: url("../assets/contacts-bg.svg");
+  background: url("../assets/layered-waves4.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -640,13 +642,22 @@ body {
   transition: 0.2s linear;
 }
 
+.links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 .contact-form {
   font-family: "Nunito Sans", sans-serif;
   font-size: 1.7rem;
   position: absolute;
-  width: 1100px;
+  width: 1260px;
   height: 600px;
-  background-color: #130d2c;
+  background: rgb(17, 23, 47);
+  background: linear-gradient(21deg, rgb(8, 10, 20) 0%, rgb(9, 11, 66) 100%);
+  box-shadow: 0px 0px 30px 5px rgb(47, 35, 119);
   border-radius: 1.7rem;
   display: flex;
   justify-content: center;
@@ -654,7 +665,6 @@ body {
   flex-direction: column;
   padding: 1rem;
   gap: 2rem;
-  min-width: 410px;
   z-index: 1000;
 }
 .contact-form button {
@@ -675,11 +685,19 @@ body {
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
 }
 
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 90%;
+}
+
 .contact-input {
   background-color: #162352;
   color: white;
   border-radius: 10px;
-  width: 90%;
+  width: 50%;
   height: 40px;
   border-color: #162352;
   padding: 1rem;
@@ -717,12 +735,187 @@ body {
   .galaxy-container {
     width: 600px;
   }
-  .welcome-section-container h3 {
-    font-size: 2.7rem;
+}
+@media only screen and (max-width: 1335px) {
+  .welcome-section-lines-container {
+    width: 100%;
+    max-width: 1300px;
   }
 }
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1300px) {
+  .contact-form {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .about-me-info-container {
+    gap: 0;
+  }
+}
+@media only screen and (max-width: 1070px) {
+  .contact-form {
+    width: 90%;
+  }
+  .projects-display-container {
+    gap: 0;
+  }
+  .solar-orbit1 {
+    width: 160px;
+    height: 160px;
+  }
+  .solar-orbit2 {
+    width: 260px;
+    height: 260px;
+  }
+  .solar-orbit3 {
+    width: 360px;
+    height: 360px;
+  }
+  .solar-orbit4 {
+    width: 420px;
+    height: 420px;
+  }
+  .welcome-section-lines-container {
+    width: 100%;
+  }
   .about-me-text p {
     font-size: 1.7rem;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .about-me-text p {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .galaxy-container {
+    height: 230px;
+  }
+  .welcome-section-container {
+    flex-direction: column;
+  }
+  .projects-display-container {
+    flex-direction: column;
+  }
+  .project-container {
+    bottom: 0;
+    min-width: 100%;
+    height: 200px;
+  }
+  .project-container img {
+    display: none;
+  }
+  .solar-orbit1 {
+    width: 110px;
+    height: 110px;
+  }
+  .solar-orbit2 {
+    width: 150px;
+    height: 150px;
+  }
+  .solar-orbit3 {
+    width: 200px;
+    height: 200px;
+  }
+  .solar-orbit4 {
+    width: 250px;
+    height: 250px;
+  }
+  .orbiting-ellipse {
+    width: 26px;
+    height: 26px;
+  }
+  .ellipse {
+    width: 45px;
+    height: 45px;
+  }
+  .system-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    bottom: 0;
+  }
+  .solar-system {
+    width: 100%;
+    height: 380px;
+  }
+  .galaxy-container {
+    width: 100%;
+  }
+  .about-me-info-container {
+    flex-direction: column;
+    align-items: start;
+  }
+  .about-me-text {
+    top: 26px;
+    max-width: 100%;
+    height: 350px;
+    bottom: 0;
+  }
+  .about-me-text p {
+    font-size: 1.5rem;
+    height: 300px;
+  }
+  .about-me-stack {
+    top: 30px;
+    width: 100%;
+  }
+  .about-me-stack img {
+    width: 60px;
+  }
+}
+@media only screen and (max-width: 712px) {
+  .welcome-section-curved-line {
+    margin-left: 4.2%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .input-container {
+    flex-direction: column;
+  }
+  .contact-form {
+    height: 550px;
+  }
+  .contact-input {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .header {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+  }
+  .header button {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+  }
+  .about-me-text p {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .contact-section h3 {
+    flex-direction: column;
+    bottom: 230px;
+  }
+  .header {
+    gap: 10px;
+  }
+  .header button {
+    font-size: 1.1rem;
+  }
+  .about-me-text {
+    top: 15px;
+  }
+  .about-me-text p {
+    font-size: 1.1rem;
+  }
+  .about-me-stack img {
+    width: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
