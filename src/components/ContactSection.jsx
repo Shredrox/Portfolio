@@ -12,6 +12,9 @@ export const ContactSection = ({elRef}) => {
             <div className="input-container">
               <input type="text" name='name' className='contact-input' placeholder='Name' required/>
               <input type="email" name='email' className='contact-input' placeholder='Email' required/>
+              <input type="hidden" name="_captcha" value="false"></input>
+              <input type="hidden" name="_next" value="https://github.com/Shredrox/Portfolio"></input>
+              <input type="hidden" name="_subject" value="New portfolio submission!"></input>
             </div>
             <textarea type="text" name='message' className='contact-input-msg' placeholder='Message' required/>
             <button type='submit' className='glow-on-hover' >Send</button>
