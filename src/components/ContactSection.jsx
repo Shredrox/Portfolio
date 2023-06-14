@@ -7,7 +7,7 @@ import instagramIcon from '../assets/instagramIcon.webp'
 export const ContactSection = ({elRef}) => {
   return (
     <div ref={elRef} className='contact-section'>
-        <form action="https://formsubmit.co/74fe684c8f1aa031c582f96066ec3486" method="POST" className="contact-form">
+        <form action="https://formsubmit.co/mihail.shterev11@gmail.com" method="POST" className="contact-form">
             <h2>Contact Me</h2>
             <div className="input-container">
               <input type="text" name='name' className='contact-input' placeholder='Name' required/>
