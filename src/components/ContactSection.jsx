@@ -11,13 +11,13 @@ export const ContactSection = ({elRef}) => {
         <div className='curved-line-down'></div>
         <div className="contact-section-horizonal-line"></div>
 
-        <div className="contact-form">
+        <form action="https://formsubmit.co/74fe684c8f1aa031c582f96066ec3486" method="POST" className="contact-form">
             <h2>Contact Me</h2>
-            <input type="text" className='contact-input' placeholder='Name'/>
-            <input type="email" className='contact-input' placeholder='Email'/>
-            <textarea type="text" className='contact-input-msg' placeholder='Message' />
-            <button className='glow-on-hover' >Send</button>
-        </div>
+            <input type="text" name='name' className='contact-input' placeholder='Name' required/>
+            <input type="email" name='email' className='contact-input' placeholder='Email' required/>
+            <textarea type="text" name='message' className='contact-input-msg' placeholder='Message' required/>
+            <button type='submit' className='glow-on-hover' >Send</button>
+        </form>
         <h3>My Links: 
           <a href="https://www.linkedin.com/in/mihail-shterev-92b149254/" target='_blank'>
             <img  src={linkedinIcon} alt="" />
