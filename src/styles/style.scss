@@ -195,7 +195,6 @@ h1{
     width: 555px;  
     height: 2px;  
     background: rgb(255,255,255);
-    box-shadow: 0 0 20px 4px #291386;
     z-index: 999; 
     margin-bottom: 49px;
 }
@@ -235,6 +234,13 @@ h1{
     gap: 60px;
 
     flex-direction: row;
+
+    h2{
+        background: linear-gradient(93deg, rgba(140,250,255,1) 0%, rgb(129, 137, 255) 100%); 
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
 }
 
 .about-me-text{
@@ -778,6 +784,7 @@ h1{
 @media only screen and (max-width: 1070px){
     .contact-form{
         width: 90%;
+        top: -10px;
     }
 
     .projects-display-container{
