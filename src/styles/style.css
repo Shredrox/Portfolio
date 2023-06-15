@@ -11,7 +11,6 @@ body {
 
 h1 {
   font-size: 3rem;
-  animation: drop-in 1200ms;
 }
 
 .straight-line-short {
@@ -98,6 +97,57 @@ h1 {
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
 }
 
+.burgir {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  top: 60px;
+  background-color: #060b21;
+  width: 100%;
+  position: fixed;
+  height: 200px;
+  z-index: 2000;
+}
+.nav-bar ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.nav-bar button {
+  background-color: #1f283a;
+  color: white;
+  border-style: none;
+  border-radius: 1rem;
+  width: 80%;
+  height: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.nav-bar button:hover {
+  background: #03e9f4;
+  color: #050801;
+  box-shadow: 0 0 2px #03e9f4, 0 0 5px #03e9f4, 0 0 10px #03e9f4, 0 0 50px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
+}
+.nav-bar li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .welcome-section {
   color: white;
   display: flex;
@@ -119,6 +169,10 @@ h1 {
           background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Nunito Sans", sans-serif;
+}
+
+.welcome-section-heading {
+  animation: drop-in 1200ms;
 }
 
 .welcome-section-container {
@@ -334,6 +388,12 @@ h1 {
   justify-content: flex-start;
   gap: 100px;
   flex-direction: row;
+}
+.projects-display-container h2 {
+  background: linear-gradient(93deg, rgb(140, 250, 255) 0%, rgb(129, 137, 255) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .project-container {
@@ -895,15 +955,12 @@ h1 {
     margin-left: 4.2%;
   }
 }
-@media only screen and (max-width: 630px) {
-  .header button {
-    font-size: 1.2rem;
+@media only screen and (max-width: 660px) {
+  .header img {
+    margin-left: 15px;
   }
 }
 @media only screen and (max-width: 600px) {
-  .header button {
-    font-size: 1.1rem;
-  }
   .input-container {
     flex-direction: column;
   }
@@ -915,17 +972,13 @@ h1 {
   }
 }
 @media only screen and (max-width: 550px) {
-  .header {
-    position: relative;
-    width: 100%;
-    justify-content: center;
-  }
-  .header button {
-    font-size: 1.1rem;
-    padding: 0.3rem;
-  }
   .about-me-text p {
     font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .welcome-section h1 {
+    font-size: 2.3rem;
   }
 }
 @media only screen and (max-width: 430px) {
