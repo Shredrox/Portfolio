@@ -131,6 +131,10 @@ h1{
 
     h2{
         font-size: 1.9rem;
+        background: -webkit-linear-gradient(#ffffff, #5b75ce);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: $mainFont;
     }
 }
 
