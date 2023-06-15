@@ -4,7 +4,7 @@ export const WelcomeSection = ({elRef}) => {
   return (
     <div ref={elRef} className='welcome-section'>
         <div className="welcome-section-container">
-          <h1>Hello there,<br></br> I'm Mihail Shterev</h1>
+          <h1>Hello there,<br></br> I'm Mihail Shterev<h2>A passionate web developer</h2></h1>
           <div className='galaxy-container'>
             <div className="orbit">
                 <div className="star"></div>

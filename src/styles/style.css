@@ -14,6 +14,10 @@ h1 {
   animation: drop-in 1200ms;
 }
 
+h2 {
+  font-size: 1.9rem;
+}
+
 .straight-line-short {
   height: 90px;
   width: 2px;
