@@ -40,10 +40,6 @@ h1{
     animation: drop-in 1200ms ;
 }
 
-h2{
-    font-size: 1.9rem;
-}
-
 .straight-line-short{
     height: 90px;  
     width: 2px;  
@@ -132,6 +128,10 @@ h2{
     justify-content: center;
     background: rgb(27,27,27);
     background: radial-gradient(circle, rgb(16, 11, 37) 0%, #010c14 100%);
+
+    h2{
+        font-size: 1.9rem;
+    }
 }
 
 .welcome-section-container{
