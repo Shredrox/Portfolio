@@ -1,5 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { motion, useInView, useAnimation } from 'framer-motion'
 import solarSystemSim from '../assets/projects/ssSimulation.jpg'
 import logicalExpressionInt from '../assets/projects/logicalexpressioninterpreter.png'
 import musicUniverse from '../assets/projects/musicUniverse.png'
@@ -10,6 +11,15 @@ export const ProjectsSection = ({elRef}) => {
   const [image, setImage] = useState(null);
   const [projectTitle, setProjectTitle] = useState('Click on a planet to view a project');
   const [projectLink, setProjectLink] = useState('');
+
+  const isInView = useInView(elRef, {once: true});
+  const animationControls = useAnimation();
+
+  useEffect(() =>{
+    if(isInView){
+      animationControls.start("visible");
+    }
+  }, [isInView]);
 
   function selectProject(id, image, projectTitle, projectLink){
     if(id == projectSelected){
@@ -28,12 +38,28 @@ export const ProjectsSection = ({elRef}) => {
   return (
     <div ref={elRef} className='projects-section'>
       <div className="projects-container">
-        <div className='lines-container'>
+
+        <motion.div className='lines-container'
+        variants={{
+          hidden: {opacity: 0},
+          visible: {opacity: 1}
+        }}
+        initial="hidden"
+        animate={animationControls}
+        transition={{duration: 1}}>
          <div className='straight-line-short'></div>
          <div className="point"/>
          <div className='straight-line-long'></div>
-        </div>
-        <div className="projects-display-container">
+        </motion.div>
+
+        <motion.div className="projects-display-container"
+        variants={{
+          hidden: {opacity: 0, y: 75},
+          visible: {opacity: 1, y: 0}
+        }}
+        initial="hidden"
+        animate={animationControls}
+        transition={{duration: 1}}>
           <div className='system-container'>
             <h2>Projects</h2>
             <div className='solar-system'>
@@ -68,7 +94,7 @@ export const ProjectsSection = ({elRef}) => {
             <a href={projectLink} target='_blank'><button>Github Repo</button></a>
             }
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

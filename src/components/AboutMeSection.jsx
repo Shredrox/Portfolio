@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion, transform } from 'framer-motion'
+import React, { useEffect, useRef } from 'react'
+import { motion, transform, useAnimation, useInView } from 'framer-motion'
 import htmlImg from '../assets/html.png'
 import cssImg from '../assets/css.png'
 import jsImg from '../assets/js.png'
@@ -8,17 +8,39 @@ import csharpImg from '../assets/csharp.png'
 import dotnetImg from '../assets/dotnet.jpg'
 
 export const AboutMeSection = ({elRef}) => {
-  
+  const isInView = useInView(elRef, {once: true});
+  const animationControls = useAnimation();
+
+  useEffect(() =>{
+    if(isInView){
+      animationControls.start("visible");
+    }
+  }, [isInView]);
+
   return (
     <div ref={elRef} className='about-me'>
       <div className="about-me-container">
-        <div className='lines-container'>
+        <motion.div className='lines-container'
+            variants={{
+              hidden: {opacity: 0},
+              visible: {opacity: 1}
+            }}
+            initial="hidden"
+            animate={animationControls}
+            transition={{duration: 1}}>
            <div className='straight-line-short'></div>
            <div className="point"/>
            <div className='straight-line-long'></div>
-        </div>
+        </motion.div>
         
-        <div className="about-me-info-container">
+        <motion.div className="about-me-info-container"
+        variants={{
+          hidden: {opacity: 0, y: 75},
+          visible: {opacity: 1, y: 0}
+        }}
+        initial="hidden"
+        animate={animationControls}
+        transition={{duration: 1}}>
           <div className='about-me-text'>
             <h2> About Me</h2>
             <p>
@@ -43,7 +65,7 @@ export const AboutMeSection = ({elRef}) => {
               <img src={dotnetImg} alt="" />
             </div>
           </div>
-        </div>
+        </motion.div>
         
       </div>
       
