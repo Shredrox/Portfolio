@@ -53,40 +53,48 @@ h1 {
 }
 
 .header {
-  background: rgb(9, 13, 25);
-  background: linear-gradient(21deg, rgb(14, 21, 41) 0%, rgb(9, 11, 66) 100%);
-  border-bottom-left-radius: 2rem;
+  background: rgb(1, 12, 20);
   color: white;
-  width: 560px;
-  height: 70px;
-  right: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  padding-inline: 1rem;
+  font-family: "Nunito Sans", sans-serif;
+  position: fixed;
+  z-index: 1200;
+}
+.header ul {
+  list-style: none;
   display: flex;
   justify-content: right;
   align-items: center;
   flex-direction: row;
-  gap: 2rem;
-  padding: 1rem;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 2rem;
-  list-style: none;
-  position: fixed;
-  z-index: 1200;
+  gap: 1.2rem;
+}
+.header img {
+  margin-left: 2rem;
 }
 .header button {
-  padding: 0.75rem;
+  position: relative;
+  padding-inline: 0.8rem;
   border-radius: 1rem;
+  border-style: none;
   color: white;
-  background-color: #1B1B1B;
+  height: 40px;
+  background-color: #0e182b;
   cursor: pointer;
   transition: 0.2s linear;
-  border-style: none;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   z-index: 900;
 }
 .header button:hover {
-  background: #03e9f4;
-  color: #050801;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+  background-color: #fefefe;
+  color: #010c14;
+  box-shadow: 0 0 5px #fefefe, 0 0 25px #fefefe;
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
 }
 
@@ -887,7 +895,15 @@ h1 {
     margin-left: 4.2%;
   }
 }
+@media only screen and (max-width: 630px) {
+  .header button {
+    font-size: 1.2rem;
+  }
+}
 @media only screen and (max-width: 600px) {
+  .header button {
+    font-size: 1.1rem;
+  }
   .input-container {
     flex-direction: column;
   }
@@ -905,7 +921,7 @@ h1 {
     justify-content: center;
   }
   .header button {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 0.3rem;
   }
   .about-me-text p {
@@ -921,7 +937,7 @@ h1 {
     gap: 10px;
   }
   .header button {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .about-me-text {
     top: 15px;
