@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion, } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export const ContactForm = ({animationControls}) => {
   return (
@@ -19,7 +19,7 @@ export const ContactForm = ({animationControls}) => {
             <input type="hidden" name="_subject" value="New portfolio submission!"></input>
         </div>
         <textarea type="text" name='message' className='contact-input-msg' placeholder='Message' required/>
-        <button type='submit' className='glow-on-hover' >Send</button>
+        <button type='submit'>Send</button>
     </motion.form>
   )
 }

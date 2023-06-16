@@ -134,11 +134,12 @@ h1 {
   height: 30px;
   font-size: 1rem;
   cursor: pointer;
+  transition: 0.2s linear;
 }
 .nav-bar button:hover {
-  background: #03e9f4;
-  color: #050801;
-  box-shadow: 0 0 2px #03e9f4, 0 0 5px #03e9f4, 0 0 10px #03e9f4, 0 0 50px #03e9f4;
+  background-color: #fefefe;
+  color: #010c14;
+  box-shadow: 0 0 5px #fefefe, 0 0 25px #fefefe;
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
 }
 .nav-bar li {
@@ -256,7 +257,6 @@ h1 {
   color: white;
   height: 800px;
   max-width: 1300px;
-  margin-inline: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -760,9 +760,9 @@ h1 {
   z-index: 900;
 }
 .contact-form button:hover {
-  background: #03e9f4;
-  color: #050801;
-  box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4;
+  background-color: #fefefe;
+  color: #010c14;
+  box-shadow: 0 0 5px #fefefe, 0 0 25px #fefefe;
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
 }
 
