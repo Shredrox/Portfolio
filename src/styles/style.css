@@ -262,6 +262,7 @@ h1 {
   align-items: center;
   flex-direction: row;
   gap: 0rem;
+  margin-inline: auto;
 }
 .about-me-container img {
   width: 300px;

@@ -277,6 +277,7 @@ h1{
     height: 800px;
     max-width: 1300px;
     @include flex(center ,center, row, 0rem);
+    margin-inline: auto;
 
     img{
         width: 300px;
