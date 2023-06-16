@@ -1,12 +1,12 @@
 import React from 'react'
 import mIcon from '../assets/favicon.ico'
-import { FaBars, FaDribbble }  from 'react-icons/fa'
+import { FaBars }  from 'react-icons/fa'
 import { useState, useEffect } from 'react';
 import { NavBar } from './NavBar';
+import { RxCross1 } from 'react-icons/rx'
 
 export const Header = ({scroll, homeRef, aboutMeRef, projectsRef, contactsRef}) => {
   const [burgirVisible, setBurgirVisible] = useState(false);
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const toggleBurgir = () => {
@@ -33,9 +33,14 @@ export const Header = ({scroll, homeRef, aboutMeRef, projectsRef, contactsRef}) 
           <li><button onClick={() => scroll(contactsRef)}>Contact</button></li>
         </ul> 
         :
-        <FaBars className='burgir' onClick={toggleBurgir}/> 
+        <div>
+          {!burgirVisible ? 
+          <FaBars className='burgir' onClick={toggleBurgir}/> 
+          :
+          <RxCross1 className='burgir' onClick={toggleBurgir}></RxCross1>
+          }
+        </div>
         }
-        
       </div>
       {burgirVisible && windowWidth < 660 &&
         <NavBar scroll={scroll} elRefs={[homeRef, aboutMeRef, projectsRef, contactsRef]}/>
