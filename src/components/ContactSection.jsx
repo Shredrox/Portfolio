@@ -5,6 +5,7 @@ import spotifyIcon from '../assets/spotifyIcon.png'
 import instagramIcon from '../assets/instagramIcon.webp'
 import { motion, useAnimation, useInView } from 'framer-motion'
 import { useEffect } from 'react'
+import { ContactForm } from './ContactForm'
 
 export const ContactSection = ({elRef}) => {
   const isInView = useInView(elRef, {once: true});
@@ -16,27 +17,9 @@ export const ContactSection = ({elRef}) => {
     }
   }, [isInView]);
 
-
   return (
     <div ref={elRef} className='contact-section'>
-        <motion.form action="https://formsubmit.co/74fe684c8f1aa031c582f96066ec3486" method="POST" className="contact-form"
-        variants={{
-          hidden: {opacity: 0},
-          visible: {opacity: 1}
-        }}
-        initial="hidden"
-        animate={animationControls}
-        transition={{duration: 1}}>
-            <h2>Contact Me</h2>
-            <div className="input-container">
-              <input type="text" name='name' className='contact-input' placeholder='Name' required/>
-              <input type="email" name='email' className='contact-input' placeholder='Email' required/>
-              <input type="hidden" name="_captcha" value="false"></input>
-              <input type="hidden" name="_subject" value="New portfolio submission!"></input>
-            </div>
-            <textarea type="text" name='message' className='contact-input-msg' placeholder='Message' required/>
-            <button type='submit' className='glow-on-hover' >Send</button>
-        </motion.form>
+        <ContactForm animationControls={animationControls}/>
         <motion.h3
         variants={{
           hidden: {opacity: 0},
