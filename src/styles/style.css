@@ -76,6 +76,7 @@ h1 {
 }
 .header img {
   margin-left: 2rem;
+  cursor: pointer;
 }
 .header button {
   position: relative;
