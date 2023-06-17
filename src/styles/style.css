@@ -95,7 +95,6 @@ h1 {
   background-color: #fefefe;
   color: #010c14;
   box-shadow: 0 0 5px #fefefe, 0 0 25px #fefefe;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
 }
 
 .burgir {
@@ -141,7 +140,6 @@ h1 {
   background-color: #fefefe;
   color: #010c14;
   box-shadow: 0 0 5px #fefefe, 0 0 25px #fefefe;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
 }
 .nav-bar li {
   display: flex;
@@ -435,7 +433,6 @@ h1 {
   background-color: #fefefe;
   color: #010c14;
   box-shadow: 0 0 5px #fefefe, 0 0 25px #fefefe;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
 }
 
 .system-container {
@@ -764,7 +761,6 @@ h1 {
   background-color: #fefefe;
   color: #010c14;
   box-shadow: 0 0 5px #fefefe, 0 0 25px #fefefe;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
 }
 
 .input-container {
