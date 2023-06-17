@@ -24,7 +24,7 @@ export const Header = ({scroll, homeRef, aboutMeRef, projectsRef, contactsRef}) 
   return (
     <div>
       <div className='header'>
-        <img src={mIcon} alt="" />
+        <img onClick={() => scroll(homeRef)} src={mIcon} alt="" />
         {windowWidth > 660 ? 
         <ul>
           <li><button onClick={() => scroll(homeRef)}>Home</button></li>
