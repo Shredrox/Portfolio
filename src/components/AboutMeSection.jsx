@@ -5,7 +5,7 @@ import cssImg from '../assets/css.png'
 import jsImg from '../assets/js.png'
 import reactImg from '../assets/react.png'
 import csharpImg from '../assets/csharp.png'
-import dotnetImg from '../assets/dotnet.jpg'
+import dotnetImg from '../assets/dotnetIcon.png'
 
 export const AboutMeSection = ({elRef}) => {
   const isInView = useInView(elRef, {once: true});
