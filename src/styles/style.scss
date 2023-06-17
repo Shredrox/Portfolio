@@ -264,7 +264,6 @@ h1{
     height: 800px;
     background: url('../assets/layered-waves1.svg');
     background-position: center;
-    background-repeat: no-repeat;
     padding-inline: 1rem;
     
     img{
@@ -350,7 +349,6 @@ h1{
     width: 15px;
     height: 15px;
     border-radius: 100%;
-
     background: #D9D9D9;
     box-shadow: 0px 0px 37.8px #D9D9D9, 0px 0px 21.6px #D9D9D9, 0px 0px 12.6px #D9D9D9, 0px 0px 6.3px #D9D9D9, 0px 0px 1.8px #D9D9D9, 0px 0px 0.9px #D9D9D9;
 }
@@ -397,7 +395,6 @@ h1{
     @include flexCenter();
     justify-content: flex-start;
     gap: 100px;
-
     flex-direction: row;
 
     h2{

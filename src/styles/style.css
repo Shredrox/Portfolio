@@ -246,7 +246,6 @@ h1 {
   height: 800px;
   background: url("../assets/layered-waves1.svg");
   background-position: center;
-  background-repeat: no-repeat;
   padding-inline: 1rem;
 }
 .about-me img {
