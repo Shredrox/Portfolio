@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react'
-import { motion, transform, useAnimation, useInView } from 'framer-motion'
+import React, { useEffect } from 'react'
+import { motion, useAnimation, useInView } from 'framer-motion'
 import htmlImg from '../assets/html.png'
 import cssImg from '../assets/css.png'
 import jsImg from '../assets/js.png'
