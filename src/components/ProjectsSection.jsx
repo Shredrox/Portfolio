@@ -1,10 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { motion, useInView, useAnimation } from 'framer-motion'
-import solarSystemSim from '../assets/projects/ssSimulation.jpg'
-import logicalExpressionInt from '../assets/projects/logicalexpressioninterpreter.png'
+import projectPlaceholder from '../assets/projects/project-placeholder.webp'
 import musicUniverse from '../assets/projects/musicUniverse.png'
-import musicPlayer from '../assets/projects/musicPlayer.jpg'
+import UniVerse from '../assets/projects/UniVerse.jpg'
 
 export const ProjectsSection = ({elRef}) => {
   const [projectSelected, setProjectSelected] = useState('');
@@ -66,22 +65,22 @@ export const ProjectsSection = ({elRef}) => {
               <div className='ellipse'></div>
               <div className="solar-orbit1">
                 <div 
-                onClick={() => selectProject('1', solarSystemSim, '2D Planetary System Simulation', 'https://github.com/Shredrox/2D-Planetary-System-Simulation')} 
+                onClick={() => selectProject('1', UniVerse, 'UniVerse' , 'https://github.com/Shredrox/UniVerseRemastered')} 
                 className={projectSelected == '1' ? 'selected-planet' : 'orbiting-ellipse'}></div>
               </div>
               <div className="solar-orbit2">
                 <div 
-                onClick={() => selectProject('2', logicalExpressionInt, 'Logical Expression Interpreter', 'https://github.com/Shredrox/LogicalExpressionInterpreter')} 
+                onClick={() => selectProject('2', projectPlaceholder, 'LifeLink', 'https://github.com/Shredrox/LifeLink')} 
                 className={projectSelected == '2' ? 'selected-planet' : 'orbiting-ellipse'}></div>
               </div>
               <div className="solar-orbit3">
                 <div 
-                onClick={() => selectProject('3', musicUniverse, 'Music Universe' , 'https://github.com/Shredrox/Music-Universe')} 
+                onClick={() => selectProject('3', projectPlaceholder, 'TuneTalk', 'https://github.com/Shredrox/TuneTalk')} 
                 className={projectSelected == '3' ? 'selected-planet' : 'orbiting-ellipse'}></div>
               </div>
               <div className="solar-orbit4">
                 <div 
-                onClick={() => selectProject('4', musicPlayer, 'Music Player' , 'https://github.com/Shredrox/Music-Player')} 
+                onClick={() => selectProject('4', musicUniverse, 'Music Universe' , 'https://github.com/Shredrox/Music-Universe')} 
                 className={projectSelected == '4' ? 'selected-planet' : 'orbiting-ellipse'}></div>
               </div>
             </div>
