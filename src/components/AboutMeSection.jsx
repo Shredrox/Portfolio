@@ -6,6 +6,7 @@ import jsImg from '../assets/js.png'
 import reactImg from '../assets/react.png'
 import csharpImg from '../assets/csharp.png'
 import dotnetImg from '../assets/dotnetIcon.png'
+import tsImg from '../assets/ts.png'
 
 export const AboutMeSection = ({elRef}) => {
   const isInView = useInView(elRef, {once: true});
@@ -54,10 +55,11 @@ export const AboutMeSection = ({elRef}) => {
             <h2>Tech Stack</h2>
             <h4>Front End</h4>
             <div className='tech-stack'>
+              <img src={reactImg} alt="" />
+              <img src={jsImg} alt="" />
+              <img src={tsImg} alt="" />
               <img src={htmlImg} alt="" />
               <img src={cssImg} alt="" />
-              <img src={jsImg} alt="" />
-              <img src={reactImg} alt="" />
             </div>
             <h4>Back End</h4>
             <div className='tech-stack'>
