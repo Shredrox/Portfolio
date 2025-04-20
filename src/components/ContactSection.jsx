@@ -38,7 +38,7 @@ export const ContactSection = ({elRef}) => {
             <a href="https://open.spotify.com/artist/5x0JssU826Vd1fIz7scsPu?si=D9hg61oVS-WuVgWIxm5MTQ" target='_blank'>
               <img src={spotifyIcon} alt="" />
             </a>
-            <a href="https://www.instagram.com/xthatmikey/" target='_blank'>
+            <a href="https://www.instagram.com/mihailxshterev/" target='_blank'>
               <img src={instagramIcon} alt="" />
             </a>
           </div>
